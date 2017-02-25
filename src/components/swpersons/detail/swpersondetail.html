@@ -1,0 +1,17 @@
+<h1 *ngIf="person" >{{person.name}}</h1>
+
+<table class="table table-bordered" *ngIf="person">
+    <tr>
+        <td>Birth Year</td>
+        <td>{{ person.birth_year }}</td>
+    </tr>
+    <tr>
+        <td>Hair Color</td>
+        <td>{{ person.hair_color}}</td>
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td>{{ person.gender }}</td>
+    </tr>
+
+</table>

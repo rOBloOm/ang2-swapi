@@ -1,0 +1,20 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" (click)="isCollapsed = !isCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" [routerLink]="['/home']">StarWars API</a>
+        </div>
+
+        <div id="navbar" class="collapse navbar-collapse" [collapse]="isCollapsed">
+            <ul class="nav navbar-nav">
+                <li><a [routerLink]="['/cast']" (click)="isCollapsed = true">Cast</a></li>
+                <li><a [routerLink]="['/ships']" (click)="isCollapsed = true">Ships</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

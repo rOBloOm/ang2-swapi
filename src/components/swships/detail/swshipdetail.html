@@ -1,0 +1,20 @@
+<h1 *ngIf="ship" >{{ship.name}}</h1>
+
+<table class="table table-bordered" *ngIf="ship">
+    <tr>
+        <td>Model</td>
+        <td>{{ ship.model }}</td>
+    </tr>
+    <tr>
+        <td>Manufacturer</td>
+        <td>{{ ship.manufacturer }}</td>
+    </tr>
+    <tr>
+        <td>Cost</td>
+        <td>{{ ship.cost }}</td>
+    </tr>
+    <tr>
+        <td>Crew</td>
+        <td>{{ ship.crew }}</td>
+    </tr>
+</table>

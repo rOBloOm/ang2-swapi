@@ -1,0 +1,19 @@
+<h1>StarWars Cast</h1>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Birth Year</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let person of swPersonList; let i = index" [routerLink]="['/cast', i+1]">
+  <!--[routerLink]="['/swpersons', i + 1]">-->
+    <td>{{ i + 1 }}</td>
+    <td>{{ person.name }}</td>
+    <td>{{ person.birth_year }}</td>
+  </tr>
+  </tbody>
+</table>
