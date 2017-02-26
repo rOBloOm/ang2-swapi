@@ -26,7 +26,6 @@ export class SwpersonsComponent implements OnInit {
     this._activatedRoute.queryParams
       .subscribe(params => {
        this.pageId = +params['page']
-       console.log(this.pageId);
 
       this._starwarsService.listCast(this.pageId)
         .subscribe(result => 
