@@ -14,11 +14,18 @@ export class SwserviceService {
 
   }
 
-  public listCast(): Observable<Array<SWPerson>> 
+  public listCast(page?:number): Observable<any>
   {
-    return this._http.get(`${this._baseUrl}/people`)
+    let getRequestUrl:string = `${this._baseUrl}/people`;
+    
+    if(page != null && !isNaN(page))
+    {
+      getRequestUrl = getRequestUrl.concat(`?page=${page}`);
+    }
+
+    return this._http.get(getRequestUrl)
     .map((response: Response) => response.json())
-    .map(json => json.results);
+    .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
 
   public cast(id: number): Observable<SWPerson> {
@@ -26,12 +33,18 @@ export class SwserviceService {
             .map((response: Response) => response.json());
   }
 
-  public listShips(): Observable<Array<SWShip>>
+  public listShips(page?:number): Observable<any>
   {
-    return this._http.get(`${this._baseUrl}/starships`)
+    let getRequestUrl:string = `${this._baseUrl}/starships`
+    if(page != null && !isNaN(page))
+    {
+      getRequestUrl = getRequestUrl.concat(`?page=${page}`);
+    }
+
+    return this._http.get(getRequestUrl)
     .map((response: Response) => response.json())
-    .map(result => result.results);
-  }
+    .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+  }  
 
   public ship(id:number): Observable<SWShip>
   {

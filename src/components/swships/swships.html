@@ -17,3 +17,9 @@
   </tr>
   </tbody>
 </table>
+<div class="float-left" *ngIf="hasPrevious">
+  <button type="button" class="btn btn-secondary btn-md btn-block" (click)="navigateToPrevious()">Previous</button>
+</div>
+<div class="float-right" *ngIf="hasNext">
+  <button type="button" class="btn btn-secondary btn-md btn-block" (click)="navigateToNext()">Next</button>
+</div>

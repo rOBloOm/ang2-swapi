@@ -8,4 +8,5 @@ export class SWPerson
     public eye_color: string;
     public birht_year: string;
     public gender: string;
+    public url: string;
 } 

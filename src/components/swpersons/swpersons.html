@@ -3,17 +3,21 @@
 <table class="table table-striped">
   <thead>
   <tr>
-    <th>ID</th>
     <th>Name</th>
     <th>Birth Year</th>
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let person of swPersonList; let i = index" [routerLink]="['/cast', i+1]">
+  <tr *ngFor="let person of swPersonList; let i = index" (click)="onGridClick(person)">
   <!--[routerLink]="['/swpersons', i + 1]">-->
-    <td>{{ i + 1 }}</td>
     <td>{{ person.name }}</td>
     <td>{{ person.birth_year }}</td>
   </tr>
-  </tbody>
+  </tbody> 
 </table>
+<div class="float-left" *ngIf="hasPrevious">
+  <button type="button" class="btn btn-secondary btn-md btn-block" (click)="navigateToPrevious()">Previous</button>
+</div>
+<div class="float-right" *ngIf="hasNext">
+  <button type="button" class="btn btn-secondary btn-md btn-block" (click)="navigateToNext()">Next</button>
+</div>
