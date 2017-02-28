@@ -13,6 +13,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { MaterialModule } from '@angular/material';
 
 import { ROUTES } from './routes';
 
@@ -32,10 +33,14 @@ import { ROUTES } from './routes';
     SWShipDetailComponent,
   ],
   imports: [
+    //Angular
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES, {useHash: true})
+    //Routes
+    RouterModule.forRoot(ROUTES, {useHash: true}),
+    //Material
+    MaterialModule
   ],
   providers: [SwserviceService],
   bootstrap: [RootComponent]
