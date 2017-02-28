@@ -1,4 +1,4 @@
-<nav >  
+<!--<nav >  
 
     <a [routerLink]="['/home']" style="color: #e4dc32">The StarWars API</a>
 
@@ -6,5 +6,80 @@
     <a  [routerLink]="['/cast']" href="#">Cast</a>
     <a  [routerLink]="['/ships']" href="#">Ships</a>
 
-</nav>
+</nav>-->
+<!--<md-toolbar color="primary">
+  <span>Custom Toolbar</span>
 
+  <md-toolbar-row>
+    <span>Second Line</span>
+    <span class="example-spacer"></span>
+    <md-icon class="example-icon">verified_user</md-icon>
+  </md-toolbar-row>
+
+  <md-toolbar-row>
+    <span>Third Line</span>
+    <span class="example-spacer"></span>
+    <md-icon class="example-icon">favorite</md-icon>
+    <md-icon class="example-icon">delete</md-icon>
+  </md-toolbar-row>
+</md-toolbar>-->
+<!--<md-tab-group color="primary">
+
+  <md-tab>
+      <a md-tab-link [routerLink]="/home">Home</a>
+    <template md-tab-label>
+      Home
+    </template>
+    <h1>Home</h1>
+  </md-tab>
+  <md-tab>
+    <template md-tab-label>
+      Cast
+    </template>
+    <h1>Cast</h1>
+  </md-tab>
+  <md-tab>
+    <template md-tab-label>
+      Ships
+    </template>
+    <h1>Ships</h1>
+  </md-tab>    
+  <md-tab>
+    <template md-tab-label>
+      <md-icon>thumb_down</md-icon> The worst sushi
+    </template>
+    <h1>Terrible sushi restaurants</h1>
+  </md-tab>
+</md-tab-group>-->
+
+
+  <!--<md-card>
+    <button md-button>FLAT</button>
+    <button md-raised-button>RAISED</button>
+  </md-card>
+  <md-card>
+    <button md-icon-button>
+      <md-icon class="md-24">favorite</md-icon>
+    </button>
+    <button md-fab>
+      <md-icon class="md-24">add</md-icon>
+    </button>
+    <button md-mini-fab>
+      <md-icon class="md-24">add</md-icon>
+    </button>
+  </md-card>
+  <md-card>
+    <button md-raised-button color="primary">PRIMARY</button>
+    <button md-raised-button color="accent">ACCENT</button>
+    <button md-raised-button color="warn">WARN</button>
+  </md-card>
+  <md-card>
+    <button md-button disabled>OFF</button>
+    <button md-raised-button disabled>OFF</button>
+    <button md-mini-fab disabled><md-icon>check</md-icon></button>
+  </md-card>-->
+<nav md-tab-nav-bar color="primary">
+  <a md-tab-link md-colors="{background: 'primary'}" [routerLink]="['/home']">Home</a>
+  <a md-tab-link [routerLink]="['/cast']">Cast</a>
+  <a md-tab-link [routerLink]="['/ships']">Ships</a>
+</nav>
