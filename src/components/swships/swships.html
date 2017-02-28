@@ -1,6 +1,6 @@
 <h1>StarWars Ships</h1>
 
-<table class="table table-striped">
+<table>
   <thead>
   <tr>
     <th>Name</th>
@@ -10,7 +10,6 @@
   </thead>
   <tbody>
   <tr *ngFor="let ship of shipsList; let i = index" (click)="onGridClick(ship)">
-  <!--[routerLink]="['/ships', ship.url]">-->
     <td>{{ ship.name }}</td>
     <td>{{ ship.model }}</td>
     <td>{{ ship.manufacturer }}</td>
@@ -18,8 +17,8 @@
   </tbody>
 </table>
 <div class="float-left" *ngIf="hasPrevious">
-  <button type="button" class="btn btn-secondary btn-md btn-block" (click)="navigateToPrevious()">Previous</button>
+  <button type="button" (click)="navigateToPrevious()">Previous</button>
 </div>
 <div class="float-right" *ngIf="hasNext">
-  <button type="button" class="btn btn-secondary btn-md btn-block" (click)="navigateToNext()">Next</button>
+  <button type="button" (click)="navigateToNext()">Next</button>
 </div>

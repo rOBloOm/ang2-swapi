@@ -7,8 +7,6 @@ import { SWPersonDetailComponent } from './../components/swpersons/detail/swpers
 import { SwpersonsComponent } from './../components/swpersons/swpersons';
 import { RootComponent } from './../components/root/root';
 import { ErrComponent } from '../components/root/err/err';
-import { CollapseDirective } from 'ng2-bootstrap';
-
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -32,8 +30,6 @@ import { ROUTES } from './routes';
     //Ships
     SWShipsComponent,
     SWShipDetailComponent,
-    //bootstrap
-    CollapseDirective
   ],
   imports: [
     BrowserModule,
